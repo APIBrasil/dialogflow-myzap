@@ -22,16 +22,14 @@ RUN set -x \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
           
+RUN composer install
+RUN cp .env.example .env
+
 RUN addgroup -g 1000 -S www && \
     adduser -u 1000 -S www -G www
 
 COPY . /var/www
 COPY --chown=www:www . /var/www
-
-USER root
-
-RUN composer install
-RUN cp .env.example .env
 
 USER www
 
