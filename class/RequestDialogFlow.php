@@ -1,4 +1,5 @@
 <?php
+
 require_once 'vendor/autoload.php';
 
 use Google\Cloud\Dialogflow\V2\SessionsClient;
@@ -15,11 +16,11 @@ class RequestDialogFlow
         $this->projectId = "apigratis-uueh";
         $this->sessionId = uniqid();
         
-        $guzzleClient = new Client([ 'verify' => false ]);
+        $guzzleClient = new Client([ 'verify' => true ]);
         $root_directory = $_SERVER['DOCUMENT_ROOT'];
 
         $credentialObject = [
-            'credentials' => $root_directory.DIRECTORY_SEPARATOR.'/credentials.json',
+            'credentials' => $root_directory.'/credentials.json',
             'transportConfig' => [
                 'rest' => [
                     'httpHandler' => function (RequestInterface $request, array $options = []) use ($guzzleClient) {
@@ -31,6 +32,7 @@ class RequestDialogFlow
 
         $this->sessionsClient = new SessionsClient($credentialObject);
         $this->sessionName = $this->sessionsClient->sessionName($this->projectId, $this->sessionId);
+
         $this->textInput = new TextInput();
         $this->queryInput = new QueryInput();
 
@@ -45,6 +47,7 @@ class RequestDialogFlow
             $this->queryInput->setText($this->textInput);
     
             $response = $this->sessionsClient->detectIntent($this->sessionName, $this->queryInput);
+
             $queryResult = $response->getQueryResult();
             //$queryText = $queryResult->getQueryText();
             //$intent = $queryResult->getIntent();

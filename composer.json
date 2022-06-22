@@ -1,7 +1,33 @@
 {
+    "name": "dialogflow/myzap",
+    "description": "Is a simple example webhook",
+    "keywords": [
+        "whatsapp",
+        "http",
+        "rest",
+        "web service",
+        "curl",
+        "client",
+        "HTTP client"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Henrique",
+            "email": "contato@apigratis.com.br",
+            "homepage": "https://github.com/jhowbhz"
+        }
+    ],
+    "require-dev": {
+        "ext-curl": "*"
+    },
     "require": {
+        "php": "^7.2.5 || ^8.0",
+        "ext-json": "*",
+        "ext-bcmath": "*",
         "google/cloud-dialogflow": "^0.27.1",
         "google/cloud": "^0.184.0",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "guzzle/guzzle": "^7.4.5"
     }
 }

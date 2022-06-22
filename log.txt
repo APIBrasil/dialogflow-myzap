@@ -1,0 +1,8 @@
+{
+    "isGroupMsg": false,
+    "session": "teste22",
+    "from": "5531994359434",
+    "wook": "RECEIVE_MESSAGE",
+    "type": "text",
+    "content": "como vai?"
+}

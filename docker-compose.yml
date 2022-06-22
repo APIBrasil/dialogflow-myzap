@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+## APLICAÇÃO
+  dialogflow-myzap:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dialogflow-myzap
+    container_name: dialogflow-myzap
+    restart: unless-stopped
+    networks:
+      - backend
+    volumes:
+      - ./:/var/www
+
+## WEBSERVER
+  dialogflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile_Nginx
+    image: nginx
+    container_name: dialogflow-webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - backend
+    volumes:
+      - ./:/var/www
+      - ./config/nginx/:/etc/nginx/conf.d/
+    depends_on:
+      - dialogflow-myzap
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
