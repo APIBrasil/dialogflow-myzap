@@ -28,9 +28,9 @@ RUN addgroup -g 1000 -S www && \
 COPY . /var/www
 COPY --chown=www:www . /var/www
 
+USER www
+
 RUN composer install
 RUN cp .env.example .env
-
-USER www
 
 EXPOSE 9000
