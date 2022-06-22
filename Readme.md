@@ -1,6 +1,13 @@
 # 🦜Simple Bot Google DialogFlow and APIGratis
 _This is a small demonstration of how to create a bot with DialogFlow using APIGratis or MyZap Free or Premium_
 
+<p align="left">
+<a href="https://github.com/jhowbhz/followers"><img title="Seguidores" src="https://img.shields.io/github/followers/jhowbhz?color=green&style=flat-square"></a>
+<a href="https://github.com/APIBrasil/dialogflow-myzap/stargazers/"><img title="Estrelas" src="https://img.shields.io/github/stars/APIBrasil/dialogflow-myzap?color=green&style=flat-square"></a>
+<a href="https://github.com/APIBrasil/dialogflow-myzap/network/members"><img title="Forks" src="https://img.shields.io/github/forks/APIBrasil/dialogflow-myzap?color=green&style=flat-square"></a>
+<a href="https://github.com/APIBrasil/dialogflow-myzap/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/APIBrasil/dialogflow-myzap?label=Watchers&color=green&style=flat-square"></a>
+</p>
+
 <hr />
 
 ### 💸 Get token for API WhatsApp
@@ -36,17 +43,13 @@ php -S localhost:80 .\WebHook.php
 ### 💻 Start new session WhatsApp
 _The session name and session key must be the same, and the api token must be obtained from the website_
 
+Name: ```session_demo```<br />
+Key: ```session_demo```<br />
+Token: ```Solicite ao APIGratis```<br />
+
 https://homologacao.wppserver.com/start
 
-### 📌 Create new session infos
-_Crede a new session with informations_
-
-Session name
-```session_demo```<br />
-Session key
-```session_demo```<br />
-API token
-```Solicite ao APIGratis```
+<hr />
 
 ### 🎉 Default address webhook 
 _Your default user address webhook_
