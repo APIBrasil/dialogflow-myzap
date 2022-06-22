@@ -9,7 +9,11 @@ class RequestMyZap
     function __construct()
     {
         $this->dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
-        $this->log = fopen("log.txt", "a") or die("Unable to open file!");
+        try {
+            $this->log = fopen("log.txt", "a");
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     function requestDefault($data, $question)
