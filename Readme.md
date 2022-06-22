@@ -55,7 +55,7 @@ _Your default user address webhook_
 http://localhost:80/webhook
 ```
 
-### Download json_credentials.json
+### Download credentials.json
 _Downloading your Google Auth credentials_
 
 https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project
