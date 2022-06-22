@@ -1,5 +1,5 @@
 # 🦜Simple Bot Google DialogFlow and APIGratis
-_Essa é uma pequena demonstração de como criar um bot com DialogFlow utilizando o APIGratis ou MyZap Free or Premium_
+_This is a small demonstration of how to create a bot with DialogFlow using APIGratis or MyZap Free or Premium_
 
 ### Install the application
 
