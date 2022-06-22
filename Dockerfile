@@ -6,8 +6,6 @@ WORKDIR /var/www
 
 RUN apk update
 
-RUN apk add sudo
-
 RUN apk add --update \
 		libpng-dev \
 		libxml2-dev \
@@ -16,6 +14,8 @@ RUN apk add --update \
 		php-pdo \
 		php-pdo_mysql \
 		php-bcmath \
+		composer \
+		sudo \
 	&& docker-php-ext-install bcmath \
 	&& docker-php-ext-install pdo \
 	&& docker-php-ext-install pdo_mysql 
@@ -23,21 +23,11 @@ RUN apk add --update \
 RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
 
-# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN apk add composer
-
 RUN addgroup -g 1000 -S www && \
     adduser -u 1000 -S www -G www
 
 COPY . /var/www
-
 COPY --chown=www:www . /var/www
-
-# RUN chmod -R 777 /var/www/bootstrap/cache
-# RUN chmod -R 777 /var/www/storage
-# RUN chmod -R 777 /var/www/storage/framework
-# RUN chmod -R 777 /var/www/storage/logs
-# RUN chmod -R 777 /var/www/storage/app
 
 RUN sudo composer install
 RUN cp .env.example .env
