@@ -1,5 +1,5 @@
 vendor/
 .env
 .gitattributes
-.composer.lock
 credentials.json
+composer.lock
