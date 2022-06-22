@@ -13,7 +13,7 @@ _This is a small demonstration of how to create a bot with DialogFlow using APIG
 ### 💸 Get token for API WhatsApp
 _Get your token with connect in server Whatsapp API_
 
-https://apigratis.com.br
+[APIGratis](https://apigratis.com.br) | [DialogFlow](https://dialogflow.cloud.google.com) | [💬 Grupo do WhatsApp](https://chat.whatsapp.com/EkbDMTX9Y1Y30NZlYGZBar)
 
 ### 💉 Install dependencies
 _Installing composer and other dependencies_
@@ -58,15 +58,10 @@ _Your default user address webhook_
 http://localhost:80/webhook
 ```
 
-### Download credentials.json
+### 🔑 Download credentials.json
 _Downloading your Google Auth credentials_
 
-https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project
-
-### DialogFlow
-_Site official_
-
-https://dialogflow.cloud.google.com/
+[https://console.cloud.google.com](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project)
 
 ### ✨ Contribuidores: 
 _Obrigado a essas pessoas maravilhosas_
