@@ -28,8 +28,8 @@ RUN addgroup -g 1000 -S www && \
 COPY . /var/www
 COPY --chown=www:www . /var/www
 
-RUN sudo chmod -R 775  /var/www/vendor/
-RUN chown -R $USER:$USER /var/www/vendor/
+RUN sudo chown root:root /var/www
+RUN chmod 755 /var/www/
 
 RUN composer install
 RUN cp .env.example .env
