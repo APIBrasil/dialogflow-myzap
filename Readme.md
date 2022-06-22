@@ -28,6 +28,9 @@ https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supp
 ### Inital Read QRCODE
 https://homologacao.wppserver.com/start
 
+### DialogFlow 
+https://dialogflow.cloud.google.com/
+
 ### Get Token
 https://apigratis.com.br
 
