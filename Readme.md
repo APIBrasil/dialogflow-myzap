@@ -3,14 +3,6 @@ _This is a small demonstration of how to create a bot with DialogFlow using APIG
 
 <hr />
 
-### 💻 Start new session WhatsApp
-https://homologacao.wppserver.com/start
-
-### 📌 Create new session infos
-Session Name = ```session_demo```<br/>
-Session Key = ```session_demo```<br/>
-API Token = ```Solicite ao APIGratis```
-
 ### 💸 Get token for API WhatsApp
 https://apigratis.com.br
 
@@ -34,6 +26,14 @@ composer install
 ```bash
 php -S localhost:80 .\WebHook.php
 ```
+
+### 💻 Start new session WhatsApp
+https://homologacao.wppserver.com/start
+
+### 📌 Create new session infos
+Session Name = ```session_demo```<br/>
+Session Key = ```session_demo```<br/>
+API Token = ```Solicite ao APIGratis```
 
 ### 🎉 Default address webhook 
 ```bash
