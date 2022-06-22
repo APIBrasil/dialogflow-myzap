@@ -5,6 +5,9 @@ COPY composer.lock composer.json /var/www/
 WORKDIR /var/www
 
 RUN apk update
+
+RUN apk add sudo
+
 RUN apk add --update \
 		libpng-dev \
 		libxml2-dev \
