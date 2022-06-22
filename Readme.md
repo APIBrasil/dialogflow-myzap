@@ -10,10 +10,10 @@ _This is a small demonstration of how to create a bot with DialogFlow using APIG
 
 <hr />
 
-### 💸 Get token for API WhatsApp
-_Get your token with connect in server Whatsapp API_
+### 💸 Get informations and servers
+_Get your token with connect in server Whatsapp API and DialogFlow_
 
-[APIGratis](https://apigratis.com.br) | [DialogFlow](https://dialogflow.cloud.google.com) | [💬 Grupo do WhatsApp](https://chat.whatsapp.com/EkbDMTX9Y1Y30NZlYGZBar)
+[APIGratis](https://apigratis.com.br) | [DialogFlow](https://dialogflow.cloud.google.com) | [💬 Group WhatsApp](https://chat.whatsapp.com/EkbDMTX9Y1Y30NZlYGZBar)
 
 ### 💉 Install dependencies
 _Installing composer and other dependencies_
@@ -40,14 +40,22 @@ _Your default, internal webhook address_
 php -S localhost:80 .\WebHook.php
 ```
 
-### 💻 Start new session WhatsApp
+### 💻 Start new session WhatsApp (QRCode Reader)
 _The session name and session key must be the same, and the api token must be obtained from the website_
 
-Name: ```session_demo```<br />
-Key: ```session_demo```<br />
-Token: ```Solicite ao APIGratis```<br />
-
 https://homologacao.wppserver.com/start
+
+```bash
+session_name: session_demo
+```
+
+```bash
+session_name: session_demo
+```
+
+```bash
+api_token: Solicite ao APIGratis
+```
 
 <hr />
 
