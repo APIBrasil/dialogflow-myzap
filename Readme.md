@@ -11,6 +11,12 @@ cp .env.example .env
 composer install
 ```
 
+### Using ngrok
+
+```bash
+.\ngrok.exe http 80
+```
+
 ### Run webhook
 ```bash
 php -S localhost:80 .\WebHook.php
