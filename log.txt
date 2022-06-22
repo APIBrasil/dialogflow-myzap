@@ -33,4 +33,11 @@
     "wook": "RECEIVE_MESSAGE",
     "type": "text",
     "content": "como vai?"
+}{
+    "isGroupMsg": false,
+    "session": "Samsung222",
+    "from": "5531994359434",
+    "wook": "RECEIVE_MESSAGE",
+    "type": "text",
+    "content": "como vai?"
 }
