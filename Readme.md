@@ -16,63 +16,77 @@ _Get your token with connect in server Whatsapp API and DialogFlow_
 [APIGratis](https://apigratis.com.br) | [DialogFlow](https://dialogflow.cloud.google.com) | [💬 Group WhatsApp](https://chat.whatsapp.com/EkbDMTX9Y1Y30NZlYGZBar)
 
 ### 💉 Install dependencies
-_Installing composer and other dependencies_
+_Up container Docker to run WebHook_
 
 ```bash
-cp .env.example .env
+cd /opt/
 ```
 
 ```bash
-composer install
+git clone https://github.com/APIBrasil/dialogflow-myzap.git dialogflow-myzap
 ```
 
-### 🪟 Using ngrok for windows (optional) 
+```bash
+cd /opt/dialogflow-myzap
+```
+
+```bash
+docker-compose up --build -d
+```
+
+### 🔌 Using ngrok for Linux (optional) 
 _If you want to run the webhook with ssl or on an external network_
 
 ```bash
+ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+```
+
+To Run
+```bash
+cd /opt/dialogflow-myzap
+ngrok.exe http 80
+```
+
+### 🔌 Using ngrok for Windows (optional) 
+
+```bash
+cd c:\www\dialogflow-myzap
 .\ngrok.exe http 80
 ```
 
-### 🔌 Run webhook
-_Your default, internal webhook address_
+### 🎉 Default address webhook 
+_Your default user address webhook_
 
 ```bash
-php -S localhost:80 .\WebHook.php
+https://YOUR_HOST_VPN.ngrok.io/webhook
 ```
+<hr />
 
 ### 💻 Start new session WhatsApp (QRCode Reader)
 _The session name and session key must be the same, and the api token must be obtained from the website_
 
 https://homologacao.wppserver.com/start
 
+
 ```bash
-session_name: session_demo
+Session name: session_demo
 ```
 
 ```bash
-session_name: session_demo
+Session key: session_demo
 ```
 
 ```bash
-api_token: Solicite ao APIGratis
-```
-
-<hr />
-
-### 🎉 Default address webhook 
-_Your default user address webhook_
-
-```bash
-http://localhost:80/webhook
+Webhook Received Messages: https://YOUR_HOST_VPN.ngrok.io/webhook
 ```
 
 ### 🔑 Download credentials.json
-_Downloading your Google Auth credentials_
+_To downloading your file credentials.json, generate Key in Google Console crendentials_
 
-[https://console.cloud.google.com](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project)
+https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project
 
-### ✨ Contribuidores: 
-_Obrigado a essas pessoas maravilhosas_
+### ✨ Contributors: 
+_Thanks to these wonderful people_
 
 <table>
   <tr>
