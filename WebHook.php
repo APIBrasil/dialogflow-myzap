@@ -33,7 +33,7 @@ class WebHook
 
     function checkRoute($routeExist)
     {
-        if($routeExist === false and $_SERVER['REQUEST_METHOD'] === 'GET') {
+        if($routeExist === false or $_SERVER['REQUEST_METHOD'] === 'GET') {
             echo json_encode(["error" => true, 'message' => 'Route does not exist.'], 404);die;
         }
     }
