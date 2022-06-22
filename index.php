@@ -1,7 +1,10 @@
 <?php
-    require('./WebHook.php');
 
+    header('Content-Type: application/json');
+    require('./WebHook.php');
+    
     $webhook = new Webhook;
-    echo $webhook->handler();
+    $handler = $webhook->handler();
+    echo $handler;
 
 ?>

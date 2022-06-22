@@ -23,9 +23,7 @@ class WebHook
 
         if($data->wook == "RECEIVE_MESSAGE" and $data->type = "text" and $data->isGroupMsg == false){
 
-            //var_dump($data->content);die;
             $send = $this->dialoflow->requestDefault($data->content);
-
             $myzap = $this->myzap->requestDefault($receive, $send);
 
             return $myzap;
