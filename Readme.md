@@ -30,7 +30,7 @@ php -S localhost:80 .\WebHook.php
 
 ### Default address webhook
 ```bash
-localhost:80:/webhook
+http://localhost:80:/webhook
 ```
 
 ### Download json_credentials.json
