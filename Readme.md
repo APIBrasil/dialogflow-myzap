@@ -8,7 +8,8 @@ _This is a small demonstration of how to create a bot with DialogFlow using APIG
 <a href="https://github.com/APIBrasil/dialogflow-myzap/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/APIBrasil/dialogflow-myzap?label=Watchers&color=green&style=flat-square"></a>
 
 [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">](https://documenter.getpostman.com/view/11074732/UzBpJkM9/)
-
+[<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">](https://chat.whatsapp.com/EkbDMTX9Y1Y30NZlYGZBar)
+ 
 <hr />
 
 ### 💸 Get informations and servers
