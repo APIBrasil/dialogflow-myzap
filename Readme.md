@@ -44,7 +44,7 @@ _If you want to run the webhook with ssl or on an external network_
 To Run
 ```bash
 cd /opt/dialogflow-myzap
-ngrok.exe http 80
+ngrok http 80
 ```
 
 ### 🔌 Using ngrok for Windows (optional) 
