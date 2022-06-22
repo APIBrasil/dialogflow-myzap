@@ -21,15 +21,19 @@ RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          
+
 RUN addgroup -g 1000 -S www && \
     adduser -u 1000 -S www -G www
 
 COPY . /var/www
+
 COPY --chown=www:www . /var/www
 
-RUN sudo chown root:root /var/www
-RUN chmod 755 /var/www/
+# RUN chmod -R 777 /var/www/bootstrap/cache
+# RUN chmod -R 777 /var/www/storage
+# RUN chmod -R 777 /var/www/storage/framework
+# RUN chmod -R 777 /var/www/storage/logs
+# RUN chmod -R 777 /var/www/storage/app
 
 RUN composer install
 RUN cp .env.example .env
@@ -37,3 +41,4 @@ RUN cp .env.example .env
 USER www
 
 EXPOSE 9000
+CMD ["php-fpm"]
