@@ -19,7 +19,7 @@ class RequestDialogFlow
         $root_directory = $_SERVER['DOCUMENT_ROOT'];
 
         $credentialObject = [
-            'credentials' => $root_directory.DIRECTORY_SEPARATOR.'/apigratis-uueh-aa0a417a6c4b.json',
+            'credentials' => $root_directory.DIRECTORY_SEPARATOR.'/credentials.json',
             'transportConfig' => [
                 'rest' => [
                     'httpHandler' => function (RequestInterface $request, array $options = []) use ($guzzleClient) {
