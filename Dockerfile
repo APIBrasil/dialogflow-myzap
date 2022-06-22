@@ -1,5 +1,7 @@
 FROM php:8-fpm-alpine
 
+COPY composer.lock composer.json /var/www/
+
 WORKDIR /var/www
 
 RUN apk update
