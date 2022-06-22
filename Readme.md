@@ -19,7 +19,7 @@ _Get your token with connect in server Whatsapp API and DialogFlow_
 _Up container Docker to run WebHook_
 
 ```bash
-cd /opt/
+apt update && apt install docker-compose && cd /opt/
 ```
 
 ```bash
