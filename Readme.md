@@ -4,9 +4,12 @@ _This is a small demonstration of how to create a bot with DialogFlow using APIG
 <hr />
 
 ### 💸 Get token for API WhatsApp
+_Get your token with connect in server Whatsapp API_
+
 https://apigratis.com.br
 
 ### 💉 Install dependencies
+_Installing composer and other dependencies_
 
 ```bash
 cp .env.example .env
@@ -16,40 +19,55 @@ cp .env.example .env
 composer install
 ```
 
-### 🔌Using ngrok for windows (optional) 
+### 🪟 Using ngrok for windows (optional) 
+_If you want to run the webhook with ssl or on an external network_
 
 ```bash
 .\ngrok.exe http 80
 ```
 
 ### 🔌 Run webhook
+_Your default, internal webhook address_
+
 ```bash
 php -S localhost:80 .\WebHook.php
 ```
 
 ### 💻 Start new session WhatsApp
+_The session name and session key must be the same, and the api token must be obtained from the website_
+
 https://homologacao.wppserver.com/start
 
 ### 📌 Create new session infos
-Session Name = ```session_demo```<br/>
-Session Key = ```session_demo```<br/>
-API Token = ```Solicite ao APIGratis```
+_Crede a new session with informations_
+
+Session name
+```session_demo```<br />
+Session key
+```session_demo```<br />
+API token
+```Solicite ao APIGratis```
 
 ### 🎉 Default address webhook 
+_Your default user address webhook_
+
 ```bash
 http://localhost:80/webhook
 ```
 
 ### Download json_credentials.json
+_Downloading your Google Auth credentials_
+
 https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project
 
-### DialogFlow 
+### DialogFlow
+_Site official_
+
 https://dialogflow.cloud.google.com/
 
+### ✨ Contribuidores: 
+_Obrigado a essas pessoas maravilhosas_
 
-### Contribuidores: ✨
-
-Obrigado a essas pessoas maravilhosas
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jhowbhz"><img src="https://avatars.githubusercontent.com/u/31408451?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jonathan Henrique</b></sub></a><br />
