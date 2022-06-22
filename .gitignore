@@ -1,5 +1,5 @@
 vendor/
-/.json
+.json
 .env
 .gitattributes
 .composer.lock
