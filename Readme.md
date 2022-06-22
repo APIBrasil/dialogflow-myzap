@@ -11,7 +11,7 @@ cp .env.example .env
 composer install
 ```
 
-### Using ngrok
+### Using ngrok for windows (optional)
 
 ```bash
 .\ngrok.exe http 80
