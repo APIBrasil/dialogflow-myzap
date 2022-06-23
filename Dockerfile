@@ -34,11 +34,10 @@ COPY --chown=www:www . /var/www
 
 RUN chmod -R 777 /var/www
 
-RUN composer install
-
 RUN cp .env.example .env
 
 USER www
 
 EXPOSE 9000
-CMD bash -c "composer install && php-fpm"
+
+CMD ["php-fpm", "composer install"]
