@@ -32,7 +32,7 @@ RUN addgroup -g 1000 -S www && \
 
 COPY --chown=www:www . /var/www
 
-RUN chmod -R 775 /var/www
+RUN chmod -R 777 /var/www
 
 RUN composer install
 
