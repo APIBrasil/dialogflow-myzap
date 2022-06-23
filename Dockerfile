@@ -35,9 +35,9 @@ COPY --chown=www:www . /var/www
 
 RUN cp .env.example .env
 
-RUN composer install
-
 USER www
+
+RUN composer install
 
 EXPOSE 9000
 CMD ["php-fpm"]
