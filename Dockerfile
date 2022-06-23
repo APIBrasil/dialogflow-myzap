@@ -37,7 +37,5 @@ RUN cp .env.example .env
 
 USER www
 
-RUN composer install
-
 EXPOSE 9000
 CMD ["php-fpm"]
