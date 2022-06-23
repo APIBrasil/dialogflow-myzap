@@ -34,7 +34,7 @@ COPY --chown=www:www . /var/www
 
 RUN chmod -R 777 /var/
 
-#RUN composer install
+RUN composer install
 
 RUN cp .env.example .env
 
