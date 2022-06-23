@@ -28,6 +28,6 @@
         "google/cloud-dialogflow": "^0.27.1",
         "google/cloud": "^0.184.0",
         "vlucas/phpdotenv": "^5.4",
-        "guzzle/guzzle": "^7.4.5"
+        "guzzlehttp/guzzle": "^7.4.5"
     }
 }
