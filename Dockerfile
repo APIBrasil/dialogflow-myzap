@@ -20,8 +20,6 @@ RUN apk add --update \
 	&& docker-php-ext-install pdo \
 	&& docker-php-ext-install pdo_mysql 
 
-RUN apk add sudo
-
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
 RUN set -x \
@@ -35,9 +33,9 @@ COPY --chown=www:www . /var/www
 
 RUN cp .env.example .env
 
-USER www
+RUN composer install
 
-RUN sudo composer install
+USER www
 
 EXPOSE 9000
 CMD ["php-fpm"]
