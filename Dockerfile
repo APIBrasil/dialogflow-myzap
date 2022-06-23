@@ -41,4 +41,4 @@ RUN cp .env.example .env
 USER www
 
 EXPOSE 9000
-CMD ["php-fpm"]
+CMD bash -c "composer install && php-fpm"
