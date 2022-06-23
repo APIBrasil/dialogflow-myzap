@@ -20,7 +20,7 @@ RUN apk add --update \
 
 RUN apk add sudo
 
-RUN apk composer
+RUN apk add composer
 
 RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
