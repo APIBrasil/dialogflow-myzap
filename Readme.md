@@ -33,7 +33,8 @@ cd /opt/dialogflow-myzap
 ```
 
 ```bash
-docker-compose up --build -d
+docker-compose build --no-cache
+docker-compose up -d
 ```
 
 ### 🔌 Using ngrok for Linux (optional) 

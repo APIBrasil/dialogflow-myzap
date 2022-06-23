@@ -21,6 +21,7 @@ services:
       dockerfile: Dockerfile_Nginx
     image: nginx
     container_name: dialogflow-webserver
+    command: composer install
     restart: unless-stopped
     ports:
       - "80:80"
