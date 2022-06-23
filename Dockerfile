@@ -1,6 +1,6 @@
 FROM php:8-fpm-alpine
 
-COPY composer.json composer.lock /var/www/
+#COPY composer.json composer.lock /var/www/
 
 WORKDIR /var/www
 
@@ -32,9 +32,9 @@ RUN addgroup -g 1000 -S www && \
 
 COPY --chown=www:www . /var/www
 
-RUN chmod -R 777 /var/
+#RUN chmod -R 777 /var/
 
-RUN composer install
+RUN composer install --no-dev --no-interaction -o
 
 RUN cp .env.example .env
 
