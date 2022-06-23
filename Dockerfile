@@ -22,6 +22,8 @@ RUN apk add --update \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
+COPY . /var/www
+
 RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
 
@@ -30,11 +32,11 @@ RUN addgroup -g 1000 -S www && \
 
 COPY --chown=www:www . /var/www
 
-RUN cp .env.example .env
+RUN chmod -R 777 /var/www
 
 RUN composer install
 
-COPY . /var/www
+RUN cp .env.example .env
 
 USER www
 
