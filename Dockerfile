@@ -28,12 +28,13 @@ RUN set -x \
 RUN addgroup -g 1000 -S www && \
     adduser -u 1000 -S www -G www
 
-COPY . /var/www
 COPY --chown=www:www . /var/www
 
 RUN cp .env.example .env
 
 RUN composer install
+
+COPY . /var/www
 
 USER www
 
