@@ -1,6 +1,6 @@
 FROM php:8-fpm-alpine
 
-COPY composer.lock composer.json /var/www/
+COPY composer.json composer.lock /var/www/
 
 WORKDIR /var/www
 
