@@ -14,11 +14,13 @@ RUN apk add --update \
 		php-pdo \
 		php-pdo_mysql \
 		php-bcmath \
-		composer \
-		sudo \
 	&& docker-php-ext-install bcmath \
 	&& docker-php-ext-install pdo \
 	&& docker-php-ext-install pdo_mysql 
+
+RUN apk add sudo
+
+RUN apk composer
 
 RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
