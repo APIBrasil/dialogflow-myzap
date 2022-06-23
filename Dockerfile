@@ -11,6 +11,8 @@ RUN apk add --update \
 		libxml2-dev \
 		libzip-dev \
 		php-json \
+		curl \
+		bash \
 		php-pdo \
 		php-pdo_mysql \
 		php-bcmath \
@@ -20,7 +22,8 @@ RUN apk add --update \
 
 RUN apk add sudo
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+RUN curl -s https://getcomposer.org/installer | php
+RUN alias composer='php composer.phar'
 
 RUN set -x \
     && echo "https://repos.php.earth/alpine/v3.9" >> /etc/apk/repositories
